@@ -40,22 +40,46 @@ body {
 
 }
 .titulo {
-  margin-bottom: 180px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 900px;
+  margin: 0;
   font-family: "Arial Narrow", Arial, sans-serif;
   color: rgb(6, 194, 228);
-  position: absolute;
   font-weight: bold;
   letter-spacing: 10px;
   opacity: 0;
   animation: fadeIn 3s ease-in-out forwards;
   text-align: center;
+  z-index: 10;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .titulo {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .titulo {
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    width: 90%;
   }
 }
 
